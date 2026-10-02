@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" data-variant="1">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#dcf0ff" />
+<title>noon — Home Page</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Figma multi-shadow stacks, composited in PARALLEL (a CSS filter chain
+     would shadow each shadow). stdDeviation = CSS blur / 2. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="shA" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="2.21" result="b1"/><feOffset in="b1" dx="-2.21" dy="11.05" result="o1"/><feFlood flood-color="#000" flood-opacity="0.02"/><feComposite in2="o1" operator="in" result="s1"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="2.21" result="b2"/><feOffset in="b2" dx="-1.105" dy="6.63" result="o2"/><feFlood flood-color="#000" flood-opacity="0.06"/><feComposite in2="o2" operator="in" result="s2"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="1.6575" result="b3"/><feOffset in="b3" dx="0" dy="3.315" result="o3"/><feFlood flood-color="#000" flood-opacity="0.1"/><feComposite in2="o3" operator="in" result="s3"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="0.5525" result="b4"/><feOffset in="b4" dx="0" dy="1.105" result="o4"/><feFlood flood-color="#000" flood-opacity="0.12"/><feComposite in2="o4" operator="in" result="s4"/>
+    <feMerge><feMergeNode in="s1"/><feMergeNode in="s2"/><feMergeNode in="s3"/><feMergeNode in="s4"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="shB" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="4.42" result="b1"/><feOffset in="b1" dx="-22.101" dy="0" result="o1"/><feFlood flood-color="#000" flood-opacity="0.03"/><feComposite in2="o1" operator="in" result="s1"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3.8675" result="b2"/><feOffset in="b2" dx="-12.155" dy="0" result="o2"/><feFlood flood-color="#000" flood-opacity="0.1"/><feComposite in2="o2" operator="in" result="s2"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="2.7625" result="b3"/><feOffset in="b3" dx="-5.525" dy="0" result="o3"/><feFlood flood-color="#000" flood-opacity="0.16"/><feComposite in2="o3" operator="in" result="s3"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="1.6575" result="b4"/><feOffset in="b4" dx="-1.105" dy="0" result="o4"/><feFlood flood-color="#000" flood-opacity="0.19"/><feComposite in2="o4" operator="in" result="s4"/>
+    <feMerge><feMergeNode in="s1"/><feMergeNode in="s2"/><feMergeNode in="s3"/><feMergeNode in="s4"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</svg>
+
+<!-- ══ 912:10736 — Home Page (375 × 812) — standalone, extracted from Product Upscale ══ -->
+<div class="screen" id="screen">
+<div class="view view--home" id="home" data-node-id="912:10736">
+<!-- 01 Home as one card: shrinks back behind the Orbi sheet -->
+<div class="home-card" id="homeCard">
+<div class="scroll" id="scroll">
+<div class="page">
+
+  <!-- ══ 912:10820 — scroll body ═══════════════════════════════════════════ -->
+  <main class="body" data-node-id="912:10820">
+
+    <!-- ── 912:10821 — Home Banner ────────────────────────────────────── -->
+    <section class="banners hscroll" data-node-id="912:10821">
+
+      <!-- 1 · hero (L) -->
+      <div class="hw" data-node-id="912:10830">
+        <div class="hw__card sk" style="--sw:1px;--sc:#f2f3f7" data-node-id="I912:10830;2600:18912">
+          <div class="hw__l" data-node-id="I912:10830;2600:18920;912:10829"><img class="cover" src="assets/4d3d9.jpg" alt="Nike Eid offer — 30% off on select styles" /></div>
+        </div>
+        <span class="ad" style="right:8px;top:8px" data-node-id="I912:10830;2600:18935">Ad</span>
+      </div>
+
+      <!-- 2 · brand (black, 2×2) -->
+      <div class="hw" data-node-id="912:10839">
+        <div class="bw" style="background:#0c0c04" data-node-id="I912:10839;2600:18837">
+          <div class="bw__top" data-node-id="I912:10839;2600:18845">
+            <div class="ab clip" style="left:0;top:0;width:188px;height:52px;border-radius:12px;background:#fff" data-node-id="I912:10839;2600:18845;912:10838">
+              <div class="ly mid" style="width:188px;height:94px"><img class="cover" src="assets/7c7c2.jpg" alt="Ajmal" /></div>
+            </div>
+          </div>
+          <div class="bw__grid">
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/fbc74.png" alt="" /></div></div>
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/cb8e1.png" alt="" /></div></div>
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/e79dc.png" alt="" /></div></div>
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/f3757.png" alt="" /></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 · brand (white, Flash Deal) -->
+      <div class="hw" data-node-id="912:10848">
+        <div class="bw sk" style="background:#fff;--sw:1px;--sc:#f2f3f7" data-node-id="I912:10848;2600:18837">
+          <div class="bw__top clip" style="border-radius:8px" data-node-id="I912:10848;2600:18845">
+            <div class="ab clip" style="left:0;top:-4px;width:216px;height:96px;background:#fff" data-node-id="I912:10848;2600:18845;912:10847">
+              <div class="ab clip" style="left:0;top:-0.86px;width:216px;height:97.463px" data-node-id="I912:10848;2600:18845;912:10847;2306:20424">
+                <img class="ab cover" style="left:-9.88px;top:-212.71px;width:247.107px;height:535.712px" src="assets/6fb33.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bw__grid">
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/615c6.png" alt="" /><span class="notch" style="background:#a5622b"><span>Flash Deal</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/f3788.png" alt="" /><span class="notch" style="background:#a5622b"><span>Flash Deal</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/bfdd8.png" alt="" /><span class="notch" style="background:#a5622b"><span>Selling fast</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/a877f.png" alt="" /><span class="notch" style="background:#a5622b"><span>Selling fast</span></span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 · hero (L1, cropped) -->
+      <div class="hw" data-node-id="912:10857">
+        <div class="hw__card sk" style="--sw:1px;--sc:#f2f3f7" data-node-id="I912:10857;2600:18912">
+          <div class="hw__l" data-node-id="I912:10857;2600:18920;912:10856"><img class="ab" style="left:0;top:-0.04%;width:100%;height:111.87%" src="assets/4a7ef.jpg" alt="" /></div>
+        </div>
+        <span class="ad" style="right:8px;top:8px" data-node-id="I912:10857;2600:18935">Ad</span>
+      </div>
+
+      <!-- 5 · brand (black, Flash Deal red) -->
+      <div class="hw" data-node-id="912:10866">
+        <div class="bw" style="background:#0c0c04" data-node-id="I912:10866;2600:18837">
+          <div class="bw__top" data-node-id="I912:10866;2600:18845">
+            <div class="ab clip" style="left:0;top:0;width:188px;height:52px;border-radius:12px;background:#fff">
+              <div class="ly mid" style="width:188px;height:94px"><img class="cover" src="assets/7c7c2.jpg" alt="Ajmal" /></div>
+            </div>
+          </div>
+          <div class="bw__grid">
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/fbc74.png" alt="" /><span class="notch" style="background:#d92626"><span>Flash Deal</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/cb8e1.png" alt="" /><span class="notch" style="background:#d92626"><span>Flash Deal</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/e79dc.png" alt="" /><span class="notch" style="background:#d92626"><span>Flash Deal</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="contain" src="assets/f3757.png" alt="" /><span class="notch" style="background:#d92626"><span>Flash Deal</span></span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 · brand (red, % OFF) -->
+      <div class="hw" data-node-id="912:10875">
+        <div class="bw" style="background:#d92626" data-node-id="I912:10875;2600:18837">
+          <div class="bw__top clip" style="border-radius:8px" data-node-id="I912:10875;2600:18845">
+            <div class="ab clip" style="left:0;top:-4px;width:216px;height:96px;background:#fff" data-node-id="I912:10875;2600:18845;912:10874">
+              <div class="ab clip" style="left:0;top:-0.39px;width:217.714px;height:98.237px">
+                <img class="ab cover" style="left:-9.96px;top:-214.4px;width:249.068px;height:539.964px" src="assets/265ba.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bw__grid">
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/c9f35.png" alt="" /><span class="notch" style="background:#b81414"><span>50% OFF</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/7b8b2.png" alt="" /><span class="notch" style="background:#b81414"><span>50% OFF</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/c8388.png" alt="" /><span class="notch" style="background:#b81414"><span>40% OFF</span></span></div></div>
+            <div class="bc"><div class="bc__img"><img class="cover" src="assets/e4b1d.png" alt="" /><span class="notch" style="background:#b81414"><span>30% OFF</span></span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 · hero (L2, video) -->
+      <div class="hw" data-node-id="912:10884">
+        <div class="hw__card sk" style="--sw:1px;--sc:#f2f3f7" data-node-id="I912:10884;2600:18912">
+          <div class="hw__l" data-node-id="I912:10884;2600:18920;912:10883"><img class="cover" src="assets/273b5.jpg" alt="" /></div>
+        </div>
+        <span class="ad" style="right:8px;top:8px" data-node-id="I912:10884;2600:18935">Ad</span>
+        <button class="vid" data-node-id="I912:10884;2600:18936" aria-label="Pause video"><img src="assets/af803.svg" alt="" /></button>
+      </div>
+
+      <!-- 8 · brand (white, M + priced cards) -->
+      <div class="hw" data-node-id="912:10893">
+        <div class="bw sk" style="background:#fff;--sw:1px;--sc:#f2f3f7" data-node-id="I912:10893;2600:18867">
+          <div class="bw__top clip" style="border-radius:8px" data-node-id="I912:10893;2600:18875">
+            <div class="ab clip" style="left:calc(50% + 0.5px);transform:translateX(-50%);top:0;width:193px;height:186.873px;background:#fff" data-node-id="I912:10893;2600:18875;912:10892">
+              <div class="ly" style="left:0;top:50%;transform:translateY(-50%);width:193px;height:193px"><img class="cover" src="assets/c0622.jpg" alt="" /></div>
+            </div>
+          </div>
+          <div class="bw__grid">
+            <div class="bc">
+              <div class="bc__img"><img class="cover" src="assets/b9784.png" alt="" /><span class="notch" style="background:#0580ab"><span>Eid offer</span></span></div>
+              <div class="bc__txt"><p class="bc__name">NIKE REVOLUTION 8 EASYON</p><p class="bc__price"><b>&#xE001; 129</b><s>299</s></p></div>
+            </div>
+            <div class="bc">
+              <div class="bc__img"><img class="cover" src="assets/e6b1b.png" alt="" /><span class="notch" style="background:#0580ab"><span>Eid offer</span></span></div>
+              <div class="bc__txt"><p class="bc__name">NIKE DOWNSHIFTER 14</p><p class="bc__price"><b>&#xE001; 129</b><s>299</s></p></div>
+            </div>
+          </div>
+          <span class="ad" style="left:171px;top:12px" data-node-id="I912:10893;2600:18895">Ad</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 912:10894 — Shop by category ───────────────────────────────── -->
+    <section class="cats" data-node-id="912:10894">
+      <h2 class="sec-h sec-h--cat" data-node-id="912:10896">Shop by category</h2>
+      <div class="cats__grid hscroll" data-node-id="912:10897">
+        <div class="cats__rows" data-node-id="912:10909">
+          <div class="cats__row" data-node-id="912:10910">
+            <a class="cat" data-node-id="912:10911">
+              <span class="cat__bg"><img src="assets/394b8.svg" alt="" /></span>
+              <span class="ly shA" style="left:3.21px;top:18.15px;width:66.302px;height:66.302px"><img class="cover" src="assets/17df5.png" alt="" /></span>
+              <span class="ly shB" style="left:37.46px;top:28.31px;width:53.041px;height:53.041px"><img class="cover" src="assets/6a1fe.png" alt="" /></span>
+              <span class="cat__lbl">Beauty &amp; Skin Care</span>
+            </a>
+            <a class="cat" data-node-id="912:10919">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="rot" style="left:-10px;top:25px;width:71.49px;height:71.49px"><span class="shA" style="width:56.991px;height:56.991px;transform:rotate(-17.5deg)"><img class="cover" src="assets/cacae.png" alt="" /></span></span>
+              <span class="ly" style="left:34px;top:13px;width:26px;height:76px"><img class="cover" src="assets/0a747.png" alt="" /></span>
+              <span class="cat__lbl">Grocery <br />&amp; Kitchen</span>
+              <span class="ly shB" style="left:36px;top:25px;width:67px;height:68px"><img class="cover" src="assets/4994b.png" alt="" /></span>
+            </a>
+            <a class="cat" data-node-id="912:10926">
+              <span class="cat__bg"><img src="assets/9b3ad.svg" alt="" /></span>
+              <span class="cat__lbl">Home Appliances</span>
+              <span class="sale" data-node-id="912:10930">
+                <span class="ly" style="left:41.19px;top:0;width:4.708px;height:5.947px;transform:scaleX(-1)"><img src="assets/95613.svg" alt="" /></span>
+                <span class="ly" style="left:0;top:0;width:4.895px;height:6.049px"><img src="assets/a87c3.svg" alt="" /></span>
+                <span class="sale__tag" data-node-id="912:10933"><img src="assets/txt-sale.svg" alt="SALE" /></span>
+              </span>
+              <span class="ly" style="left:-16px;top:2px;width:99px;height:99px"><img class="cover" src="assets/f34e8.png" alt="" /></span>
+              <span class="ly" style="left:34px;top:8px;width:74px;height:84px"><img class="cover" src="assets/3b9bd.png" alt="" /></span>
+            </a>
+            <a class="cat" data-node-id="912:10937">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="ly shA" style="left:2.21px;top:12.15px;width:66.302px;height:66.302px"><img class="cover" src="assets/17df5.png" alt="" /></span>
+              <span class="ly shB" style="left:36.46px;top:24.31px;width:53.041px;height:53.041px"><img class="cover" src="assets/6a1fe.png" alt="" /></span>
+              <span class="cat__lbl">Beauty &amp; Skin Care</span>
+            </a>
+            <a class="cat" data-node-id="912:10945">
+              <span class="cat__bg" style="top:-0.12px"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="rot" style="left:-6.65px;top:13.7px;width:73.768px;height:73.768px"><span class="shA" style="width:65.079px;height:65.079px;transform:rotate(-8.28deg)"><img class="cover" src="assets/cacae.png" alt="" /></span></span>
+              <span class="ly shB" style="left:7.73px;top:0;width:90.612px;height:90.612px"><img class="cover" src="assets/4994b.png" alt="" /></span>
+              <!-- Proxima Nova Semibold isn't available to the browser: Figma's own render of the layer -->
+              <span class="ly" style="left:18.612px;top:98.186px;width:54.5px;height:23px" data-node-id="912:10950"><img src="assets/txt-grocery-kitchen.png" alt="Grocery &amp; Kitchen" /></span>
+            </a>
+          </div>
+          <div class="cats__row" data-node-id="912:10951">
+            <a class="cat" data-node-id="912:10952">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="ly shA" style="left:-4.42px;top:12.16px;width:70.722px;height:70.722px"><img class="cover" src="assets/1cdd4.png" alt="" /></span>
+              <span class="cat__lbl">Toys <br />&amp; Games</span>
+              <span class="ly shB" style="left:49.52px;top:27.63px;width:32.709px;height:53.041px"><img class="cover" src="assets/f2e14.jpg" alt="" /></span>
+            </a>
+            <a class="cat" data-node-id="912:10957">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="ly clip" style="left:0.46px;top:4.47px;width:74px;height:82px"><img class="ab" style="left:-5.94%;top:2.77%;width:105.26%;height:95.24%" src="assets/4f0a2.png" alt="" /></span>
+              <span class="cat__lbl">Electronics &amp; Tools</span>
+              <span class="ly shA" style="left:32.84px;top:25px;width:54.146px;height:54.146px"><img class="cover" src="assets/76d27.png" alt="" /></span>
+            </a>
+            <a class="cat" data-node-id="912:10962">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="rot" style="left:-5.7px;top:6.63px;width:83.372px;height:77.451px"><span class="shA" style="width:63.244px;height:71.107px;transform:rotate(102.83deg) scaleY(-1)"><img class="cover" src="assets/7b879.png" alt="" /></span></span>
+              <span class="cat__lbl">Hair Care</span>
+              <span class="rot" style="left:28.52px;top:4.61px;width:69.091px;height:84.243px"><span class="shB" style="width:67.973px;height:83.333px;transform:rotate(0.77deg)"><img class="cover" src="assets/83d49.png" alt="" /></span></span>
+            </a>
+            <a class="cat" data-node-id="912:10967">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="ly shA" style="left:-4.73px;top:-1.11px;width:80.667px;height:75.142px"><img src="assets/99ba5.png" alt="" /></span>
+              <span class="rot" style="left:19.79px;top:5.52px;width:80.667px;height:80.667px"><span class="shB" style="width:80.667px;height:80.667px;transform:rotate(-90deg)"><img class="cover" src="assets/7fdf6.png" alt="" /></span></span>
+              <span class="cat__lbl">Shoes &amp; Clothes</span>
+            </a>
+            <a class="cat" data-node-id="912:10972">
+              <span class="cat__bg"><img src="assets/c7a2d.svg" alt="" /></span>
+              <span class="ly shA" style="left:-4.42px;top:12.16px;width:70.722px;height:70.722px"><img class="cover" src="assets/1cdd4.png" alt="" /></span>
+              <span class="ly" style="left:20.282px;top:98.329px;width:51.5px;height:23px" data-node-id="912:10975"><img src="assets/txt-toys-games.png" alt="Toys &amp; Games" /></span>
+              <span class="ly shB" style="left:47.52px;top:27.63px;width:32.709px;height:53.041px"><img class="cover" src="assets/f2e14.jpg" alt="" /></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 912:10977 — Recommended for you ────────────────────────────── -->
+    <section class="reco" data-node-id="912:10977">
+      <h2 class="sec-h" data-node-id="912:10981">Recommended for you</h2>
+      <div class="reco__body" data-node-id="912:10982">
+        <div class="tabs hscroll" id="tabs" role="tablist" data-node-id="912:10983">
+          <button class="tab is-on" role="tab" aria-selected="true" data-node-id="912:10984"><img src="assets/acbcb.svg" alt="" /><span>For you</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-node-id="912:10988"><img src="assets/30e40.svg" alt="" /><span>Electronics</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-node-id="912:10991"><img src="assets/74a03.svg" alt="" /><span>Beauty</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-node-id="912:10994"><img src="assets/caf20.svg" alt="" /><span>Fashion</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-node-id="912:10997"><img src="assets/dd476.svg" alt="" /><span>Home</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-node-id="912:11000"><img src="assets/74a03.svg" alt="" /><span>Beauty</span></button>
+        </div>
+        <div class="rail rail--reco hscroll" data-rail="reco" data-node-id="912:11003"></div>
+      </div>
+    </section>
+
+    <!-- ── 912:11229 — Offers for you ─────────────────────────────────── -->
+    <section class="offers" data-node-id="912:11229">
+      <h2 class="sec-h" data-node-id="912:11233">Offers for you</h2>
+      <div class="offers__row hscroll" data-node-id="912:11234">
+
+        <a class="cp sk" style="--sw:2.5px;--sc:#b73428" data-node-id="912:11235">
+          <div class="cp__in" style="background:#4de0fd" data-node-id="912:11236">
+            <div class="ab clip" style="left:-1px;top:-8.4px;width:193px;height:224px;background:#fff" data-node-id="912:11237">
+              <img class="ab cover" style="left:-351.14px;top:-81.63px;width:534.307px;height:1022.104px" src="assets/419fc.jpg" alt="" />
+              <div class="ab blend-color" style="left:0;top:0;width:129.5px;height:171.8px;background:#f47165;box-shadow:inset 0 0 0 1.126px rgba(255,255,255,.7)" data-node-id="912:11240"></div>
+            </div>
+            <div class="rot" style="left:23.64px;top:29.69px;width:73.284px;height:21.707px"><div class="glow" style="width:72.439px;height:17.909px;background:#ef8980;filter:blur(10px);transform:rotate(-3.02deg)"></div></div>
+            <div class="rot" style="left:39.49px;top:21.79px;width:43.616px;height:13.798px"><div class="glow" style="width:43.067px;height:11.542px;background:#ef8980;filter:blur(9.005px);transform:rotate(-3.02deg)"></div></div>
+            <div class="rot" style="left:calc(50% - 0.21px);transform:translateX(-50%);top:1.4px;width:106.655px;height:83.47px" data-node-id="912:11243">
+              <div class="clip" style="position:relative;width:93.487px;height:56.096px;transform:rotate(19deg)"><img class="ab" style="left:-0.09%;top:-19.92%;width:100.19%;height:126.56%" src="assets/bc476.png" alt="noon ENBD card" /></div>
+            </div>
+            <div class="cp__txt" data-node-id="912:11251"><p class="cp__t"> 10% Cashback </p><p class="cp__s">on all spends with <br />noon ENBD card</p></div>
+            <div class="cp__line"><img src="assets/e8e25.svg" alt="" /></div>
+            <span class="cp__btn" data-node-id="912:11244">Apply Now<img src="assets/2601d.svg" alt="" /></span>
+          </div>
+          <span class="cp__hole" style="left:118.5px"><img src="assets/88bb8.svg" alt="" /></span>
+          <span class="cp__hole" style="left:-9.5px"><img src="assets/88bb8.svg" alt="" /></span>
+        </a>
+
+        <a class="cp sk" style="--sw:2.5px;--sc:#15859b" data-node-id="912:11256">
+          <div class="cp__in" style="background:#4de0fd" data-node-id="912:11257">
+            <div class="rot" style="left:calc(50% + 171.61px);top:calc(50% + 237.57px);transform:translate(-50%,-50%);width:3098.348px;height:2173.076px" data-node-id="912:11258">
+              <div class="clip" style="position:relative;flex:none;width:1801.218px;height:2881.948px;background:#121214;opacity:.7;transform:rotate(-97.74deg)">
+                <div class="rot" style="left:872.87px;top:861.17px;width:1062.488px;height:931.04px"><div style="position:relative;width:712.199px;height:902.701px;transform:rotate(105.8deg)"><img class="ab cover" style="inset:0;width:100%;height:100%" src="assets/419fc.jpg" alt="" /></div></div>
+                <div class="ab blend-color" style="inset:0;background:#4de0fd;box-shadow:inset 0 0 0 1.126px rgba(255,255,255,.7)" data-node-id="912:11261"></div>
+              </div>
+            </div>
+            <div class="rot" style="left:23.64px;top:29.69px;width:73.284px;height:21.707px"><div class="glow" style="width:72.439px;height:17.909px;background:#07c3fc;filter:blur(10px);transform:rotate(-3.02deg)"></div></div>
+            <div class="rot" style="left:39.49px;top:21.79px;width:43.616px;height:13.798px"><div class="glow" style="width:43.067px;height:11.542px;background:#07c3fc;filter:blur(9.005px);transform:rotate(-3.02deg)"></div></div>
+            <!-- Upheaval / Mini Pixel-7 lockup: Figma's own render of group 912:11264 (render bounds start 3.04px left of the box) -->
+            <img class="ab" style="left:17.738px;top:20.91px;width:85px;height:36px" src="assets/txt-delivery-dash.png" alt="Delivery Dash" data-node-id="912:11264" />
+            <div class="cp__txt" data-node-id="912:11275"><p class="cp__t cp__t--win"> Win &#xE001; 100 </p><p class="cp__s">Play &amp; win <br />instant rewards</p></div>
+            <div class="cp__line"><img src="assets/e8e25.svg" alt="" /></div>
+            <span class="cp__btn" data-node-id="912:11268">Play Now<img src="assets/2601d.svg" alt="" /></span>
+          </div>
+          <span class="cp__hole" style="left:118.5px"><img src="assets/88bb8.svg" alt="" /></span>
+          <span class="cp__hole" style="left:-9.5px"><img src="assets/88bb8.svg" alt="" /></span>
+        </a>
+
+        <a class="cp sk" style="--sw:2.5px;--sc:#830034" data-node-id="912:11280">
+          <div class="cp__in" style="background:#9c335c" data-node-id="912:11281">
+            <div class="ab clip" style="left:-432px;top:-396.4px;width:706px;height:646px;background:#121214" data-node-id="912:11282">
+              <img class="ab cover" style="left:256.016px;top:187.734px;width:1067.295px;height:866.487px" src="assets/419fc.jpg" alt="" />
+              <div class="ab blend-color" style="inset:0;background:#9c335c" data-node-id="912:11285"></div>
+              <div class="ab" style="left:338.438px;top:315.329px;width:30.005px;height:5.299px" data-node-id="912:11286"><img class="ab" style="left:-75.04%;top:-424.88%;width:250.08%;height:949.76%" src="assets/f2a1d.svg" alt="" /></div>
+            </div>
+            <div class="rot" style="left:28.79px;top:14.54px;width:64.084px;height:44.269px"><div class="glow" style="width:58.271px;height:28.945px;background:#fbd5e4;filter:blur(9.006px);transform:rotate(16.46deg)"></div></div>
+            <div class="ab" style="left:29.453px;top:16.814px;width:63.521px;height:39.718px" data-node-id="912:11288" role="img" aria-label="noon One">
+              <div class="rot" style="left:0;top:0;width:63.289px;height:39.581px"><div style="position:relative;width:60.426px;height:34.334px;transform:rotate(-5.11deg) skewX(0.07deg)"><img class="fill" src="assets/e6261.svg" alt="" /></div></div>
+              <div class="rot" style="left:9.03px;top:10.16px;width:41.73px;height:16.158px"><div style="position:relative;width:40.754px;height:12.581px;transform:rotate(-5.11deg) skewX(0.08deg)"><img class="fill" src="assets/9ebfb.svg" alt="" /></div></div>
+            </div>
+            <div class="cp__txt" data-node-id="912:11311"><p class="cp__t"> 10% Cashback </p><p class="cp__s cp__s--12">on noon, supermall, food &amp; minutes</p></div>
+            <div class="cp__line"><img src="assets/e8e25.svg" alt="" /></div>
+            <span class="cp__btn" data-node-id="912:11304">Try Now<img src="assets/2601d.svg" alt="" /></span>
+          </div>
+          <span class="cp__hole" style="left:116.5px"><img src="assets/88bb8.svg" alt="" /></span>
+          <span class="cp__hole" style="left:-9.5px"><img src="assets/88bb8.svg" alt="" /></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── 912:11316 — Bestsellers ────────────────────────────────────── -->
+    <section class="prod" data-node-id="912:11316">
+      <h2 class="sec-h" data-node-id="912:11321">Bestsellers </h2>
+      <div class="rail hscroll" data-rail="best" data-node-id="912:11322"></div>
+    </section>
+
+    <!-- ── 912:11548 — Keep shopping for ──────────────────────────────── -->
+    <section class="keep" data-node-id="912:11548">
+      <h2 class="sec-h sec-h--keep" data-node-id="912:11550">Keep shopping for</h2>
+      <div class="keep__row hscroll" data-rail="keep" data-node-id="912:11555"></div>
+    </section>
+
+    <!-- ── 912:11850 — Summer Essentials ──────────────────────────────── -->
+    <section class="summer" data-node-id="912:11850">
+      <div class="summer__head" data-node-id="912:11853">
+        <div class="summer__copy" data-node-id="912:11854">
+          <p class="summer__t" data-node-id="912:11855">SUMMER ESSENTIALS</p>
+          <p class="summer__s" data-node-id="912:11856">Enjoy extra 30% off with no min. spend.</p>
+        </div>
+        <img class="summer__logo" src="assets/20cbf.png" alt="Nike" data-node-id="912:11857" />
+      </div>
+      <div class="summer__row hscroll" data-node-id="912:11858">
+        <div class="summer__vid" data-node-id="912:11859">
+          <img class="ab cover" style="left:-7px;top:0.17px;width:200px;height:310px" src="assets/b9166.jpg" alt="" />
+          <button class="summer__mute" data-node-id="912:11862" aria-label="Unmute"><span class="ly" style="inset:12.9% 7.78% 0.77% 8.33%"><img src="assets/2dfce.svg" alt="" /></span></button>
+        </div>
+        <div class="rail rail--summer" data-rail="summer" data-node-id="912:11866"></div>
+      </div>
+      <span class="ad ad--2" style="left:369px;top:214.5px;background:rgba(255,255,255,.7);color:#747474" data-node-id="912:12090">Ad</span>
+      <span class="ad ad--2" style="left:348px;top:-19.86px;background:rgba(255,255,255,.5);color:#fff" data-node-id="912:12091">Ad</span>
+      <span class="ad" style="left:348px;top:6px;background:rgba(255,255,255,.1);color:#d0d4dd" data-node-id="912:12092">Ad</span>
+    </section>
+
+    <!-- ── 912:12093 — Selling out fast ───────────────────────────────── -->
+    <section class="prod" data-node-id="912:12093">
+      <h2 class="sec-h" data-node-id="912:12098">Selling out fast</h2>
+      <div class="rail hscroll" data-rail="selling" data-node-id="912:12099"></div>
+    </section>
+
+    <!-- ── 912:12325 — New launches ───────────────────────────────────── -->
+    <section class="launch" data-node-id="912:12325">
+      <div class="launch__card" data-node-id="912:12326">
+        <p class="launch__t" data-node-id="912:12431">NEW <span>LAUNCHES</span></p>
+        <!-- Larken DEMO Thin isn't available: Figma's render of 912:12430 at its render bounds -->
+        <img class="ab" style="left:17.042px;top:46.48px;width:145.25px;height:12px" src="assets/txt-now-available.png" alt="Now available on noon" data-node-id="912:12430" />
+        <div class="launch__rail hscroll" data-node-id="912:12327">
+          <article class="lc sk" style="--sw:1px;--sc:#ebebeb" data-node-id="912:12328">
+            <img class="lc__img" src="assets/167f6.png" alt="PlayStation 5" />
+            <div class="lc__body">
+              <div class="lc__txt"><p class="lc__t">The best Playstation!</p><p class="lc__d">Limitless entertainment with the new Playstation 5 Pro</p></div>
+              <button class="lc__btn">Shop Now</button>
+            </div>
+          </article>
+          <article class="lc sk" style="--sw:1px;--sc:#ebebeb" data-node-id="912:12336">
+            <img class="lc__img" src="assets/167f6.png" alt="PlayStation 5" />
+            <div class="lc__body">
+              <div class="lc__txt"><p class="lc__t">Ready to game on?</p><p class="lc__d">Limitless entertainment with the new Playstation 5 Pro</p></div>
+              <button class="lc__btn">Shop Now</button>
+            </div>
+          </article>
+          <article class="lc lc--wide sk" style="--sw:1px;--sc:#ebebeb" data-node-id="912:12344">
+            <div class="lc__grid" data-node-id="912:12345">
+              <div class="lc__gr">
+                <div class="ic stroke" style="--sw:0.833px;--sc:#f0f4f9" data-node-id="912:12347">
+                  <div class="ic__in"><div class="ic__pi"><div class="ab clip" style="inset:-18.06% 3.48% -87.48% 6.45%"><img class="ab" style="left:0;top:-11.34%;width:100%;height:73.92%" src="assets/e5982.jpg" alt="" /></div></div></div>
+                </div>
+                <div class="ic ic--photo" data-node-id="912:12365">
+                  <img class="fill cover" style="border-radius:10.5px" src="assets/62133.jpg" alt="" />
+                  <img class="ab cover" style="left:-12.25px;top:-51.16px;width:156.112px;height:234.167px" src="assets/62133.jpg" alt="" />
+                </div>
+              </div>
+              <div class="lc__gr lc__gr--abs" data-node-id="912:12381">
+                <div class="ic stroke" style="--sw:0.833px;--sc:#f0f4f9;position:absolute;left:0;top:0" data-node-id="912:12382">
+                  <div class="ic__in"><div class="ic__pi"><div class="ab clip" style="inset:-18.06% 3.48% -53.14% 6.45%"><img class="ab" style="left:0;top:-13.62%;width:100%;height:88.78%" src="assets/a5647.jpg" alt="" /></div></div></div>
+                </div>
+                <div class="ic stroke" style="--sw:0.833px;--sc:#f0f4f9;position:absolute;left:139.65px;top:0" data-node-id="912:12400">
+                  <div class="ic__in"><div class="ic__pi"><div class="ab" style="inset:-23.38% 4.96% -50.82% 3.4%"><img class="fill cover" src="assets/e77d4.jpg" alt="" /></div></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="lc__txt lc__txt--wide" data-node-id="912:12418"><p class="lc__t">Essentials for work and after-hours!</p><p class="lc__d2">Fashion finds for all day comfort</p></div>
+            <div class="lc__cta"><button class="lc__btn lc__btn--260" data-node-id="912:12422"><img src="assets/txt-shop-collection.png" alt="Shop the collection" /></button></div>
+          </article>
+          <article class="lc lc--wide lc--grey sk" style="--sw:1px;--sc:#ebebeb" data-node-id="912:12423">
+            <img class="lc__img lc__img--271" src="assets/167f6.png" alt="PlayStation 5" />
+            <div class="lc__txt lc__txt--wide"><p class="lc__t">Are you game for the PS5?</p><p class="lc__d2">Gaming that feels real</p></div>
+            <div class="lc__cta lc__cta--hug"><button class="lc__btn lc__btn--260" data-node-id="912:12429"><img src="assets/txt-shop-collection.png" alt="Shop the collection" /></button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</div>
+
+<!-- ══ 912:10737 — header, pinned above the scroll. Collapses on scroll (from the noon app recording):
+     tiles → one-line pills, the address slides away under the search bar, the body stays attached below. -->
+<header class="hdr" id="hdr">
+<nav class="sw hscroll" data-node-id="912:10738" aria-label="noon services">
+  <a class="tile" style="background:#feee00" data-node-id="912:10742" aria-label="noon">
+    <span class="tile__big">
+      <div class="ly" style="inset:41.44% 15.66%"><img src="assets/a0c11.svg" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--noon">noon</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10748" aria-label="noon Minutes">
+    <span class="tile__big">
+      <div class="ly" style="inset:15.61% 15.79% 15.97% 15.79%"><img class="cover" src="assets/3c404.gif" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--min">MINUTES</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10750" aria-label="supermall">
+    <span class="tile__big">
+      <div class="ly" style="inset:29.1% 17.69% 50.4% 17.69%"><img src="assets/4cc8e.svg" alt="" /></div>
+      <div class="ly" style="inset:50.06% 36.52% 29.47% 17.69%"><img src="assets/d1e7c.svg" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--sm">supermall</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10766" aria-label="noon Food">
+    <span class="tile__big">
+      <div class="ly" style="inset:29.05% 13.9% 29.41% 13.9%"><img src="assets/1c5eb.svg" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--food">FOOD</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10776" aria-label="Instant service">
+    <span class="tile__big">
+      <div class="ly" style="left:7.48px;top:21.22px;width:61.033px;height:33.568px"><img class="cover" src="assets/54e8c.png" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--inst">instant</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10778" aria-label="now now">
+    <span class="tile__big">
+      <div class="ly mid" style="left:calc(50% - 2px);width:35.745px;height:48.744px"><img src="assets/d7979.svg" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--now">Now</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10788" aria-label="send">
+    <span class="tile__big">
+      <div class="ly mid" style="width:52.435px;height:31.108px"><img class="cover" src="assets/a15a4.jpg" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--send">send</span></span>
+  </a>
+  <a class="tile" data-node-id="912:10790" aria-label="wash">
+    <span class="tile__big">
+      <div class="ly mid clip" style="width:59.741px;height:36.892px"><img class="ab" style="left:0;top:-36.76%;width:100%;height:161.06%" src="assets/50a80.png" alt="" /></div>
+    </span>
+    <span class="tile__mini" aria-hidden="true"><span class="wm wm--wash">wash</span></span>
+  </a>
+</nav>
+
+<div class="addr" data-node-id="912:10792">
+  <button class="addr__loc" data-node-id="912:10793">
+    <span class="addr__row" data-node-id="912:10794">
+      <span class="addr__name" data-node-id="912:10795">
+        <span class="addr__home" data-node-id="912:10796"><span class="ly" style="left:1.38px;top:2.64px;width:15.245px;height:13.912px"><img src="assets/167f2.svg" alt="" /></span></span>
+        <span class="addr__title" data-node-id="912:10803">Rahul’s home</span>
+      </span>
+      <span class="addr__chev" data-node-id="912:10804"><img src="assets/5c05d.svg" alt="" /></span>
+    </span>
+    <span class="addr__line" data-node-id="912:10806">403, Tower 1, 4th floor BLVD Heights- Down...</span>
+  </button>
+  <button class="addr__wish stroke" style="--sw:1px;--sc:#eaecf0" data-node-id="912:10807" aria-label="Wishlist">
+    <span class="ly mid" style="top:calc(50% + 1px);width:18px;height:16px"><img src="assets/40941.svg" alt="" /></span>
+  </button>
+</div>
+
+<label class="search sk" aria-label="Search noon" style="--sw:1.005px;--sc:#e2e2e2" data-node-id="912:10812">
+  <span class="search__field" data-node-id="912:10813">
+    <span class="search__q" data-node-id="912:10814">
+      <span class="search__ico" data-node-id="912:10815"><img src="assets/e5710.svg" alt="" /></span>
+      <span class="search__ph" data-node-id="912:10816">Search for&nbsp;<span class="search__tk" id="searchTk"><span>“Maybelline”</span></span></span>
+    </span>
+  </span>
+  <span class="search__div" data-node-id="912:10817"><img src="assets/e736f.svg" alt="" /></span>
+  <span class="search__cam" data-node-id="912:10818"><img src="assets/49e65.svg" alt="" /></span>
+</label>
+
+</header>
+
+<!-- ══ 912:12987 — Bottom Nav (fixed over the scroll) ═══════════════════ -->
+<nav class="bnav" data-node-id="912:12987" aria-label="Main">
+  <div class="bnav__bar" data-node-id="912:12988">
+    <div class="bnav__items" data-node-id="912:12989">
+      <a class="bnav__it is-on" data-node-id="912:12990"><img src="assets/86f29.svg" alt="" /><span>Home</span></a>
+      <a class="bnav__it" data-node-id="912:12997"><span class="bnav__ico"><img class="fill" src="assets/3240a.svg" alt="" /><span class="ly" style="inset:12.5% 16.67% 16.51% 12.51%"><img src="assets/892c2.svg" alt="" /></span></span><span>Categories</span></a>
+      <a class="bnav__it" data-node-id="912:13009"><img src="assets/542ee.svg" alt="" /><span>Deals</span></a>
+      <a class="bnav__it" data-node-id="912:13020"><img src="assets/5813f.svg" alt="" /><span>Account</span></a>
+      <a class="bnav__it" data-node-id="912:13024"><img src="assets/45980.svg" alt="" /><span>Cart</span></a>
+    </div>
+    <div class="bnav__home" data-node-id="912:13037"><span></span></div>
+  </div>
+</nav>
+</div>
+
+<!-- ══ 1086:92697 "Brand Banner2" — tapping the bot presents Orbi in a sheet (orbi/main.js):
+     Home shrinks into a rounded card, a black scrim fades to 80%, the sheet rises, the bot flies onto it. -->
+<div class="sheet-scrim" id="orbiScrim" aria-hidden="true"></div>
+<section class="sheet" id="orbiSheet" role="dialog" aria-modal="true" aria-label="Orbi" aria-hidden="true" inert data-node-id="1086:92760">
+  <h1 class="sheet__hi" data-node-id="1086:93479">Hi Saswata</h1>
+  <p class="sheet__sub" data-node-id="1086:93480">Ask me to find products, track orders or reorder your essentials.</p>
+</section>
+
+<!-- ══ 1068:81084 — Orbi Soft Idle + Helmet (80 × 80 at 287, 644): the 3D noon bot,
+     1:1 from github.com/saswata2002/3D-noon-bot. Floats over the scroll, under the nav. -->
+<canvas class="orbi" id="orbi" aria-hidden="true"></canvas>
+<div class="orbi-hit" id="orbiHit" role="img" aria-label="Orbi, the noon assistant" data-node-id="1068:81084"></div>
+
+</div>
+<!-- ══ 1093:108979 — Status Bar (Bars / Status Bar / iPhone / Light, 375 × 42.565): fixed over the whole flow,
+     above Home, the header and the Orbi sheet. Light content (white) while the sheet's scrim is up (orbi/main.js). ══ -->
+<div class="sbar" id="sbar" data-node-id="1093:110744" aria-hidden="true">
+  <span class="sbar__time" data-node-id="I1093:110744;0:4469">9:41</span>
+  <img class="sbar__cell" src="assets/1ef64.svg" alt="" data-node-id="I1093:110744;0:4466" />
+  <img class="sbar__wifi" src="assets/a2b94.svg" alt="" data-node-id="I1093:110744;0:4462" />
+  <span class="sbar__batt" data-node-id="I1093:110744;0:4456"><i class="sbar__border"></i><img class="sbar__cap" src="assets/1b174.svg" alt="" /><i class="sbar__fill"></i></span>
+</div>
+</div>
+
+<script src="app.js"></script>
+<script src="haptics.js"></script>
+<script type="importmap">
+{ "imports": { "three": "./orbi/vendor/three.module.js" } }
+</script>
+<script type="module" src="orbi/main.js"></script>
+</body>
+</html>

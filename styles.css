@@ -1,0 +1,680 @@
+/* ══════════════════════════════════════════════════════════════════════
+   noon Home — 1:1 build of Figma node 912:10736 "Home Page"
+   File: JpLINoW8RMtYB6CLRkw2vm (Saswata), page "Upscale"
+   Frame: 375 × 812. Header at y=59, scroll body (912:10820) at y=273,
+   3240.4 tall, sections 28px apart. Bottom nav pinned at y=731.
+   Every number is transcribed from get_design_context / get_metadata.
+   ══════════════════════════════════════════════════════════════════════ */
+
+@font-face { font-family: Noontree; src: url('fonts/Noontree-Regular.otf')  format('opentype'); font-weight: 400; font-display: block; }
+@font-face { font-family: Noontree; src: url('fonts/Noontree-Medium.otf')   format('opentype'); font-weight: 500; font-display: block; }
+@font-face { font-family: Noontree; src: url('fonts/Noontree-SemiBold.otf') format('opentype'); font-weight: 600; font-display: block; }
+@font-face { font-family: Noontree; src: url('fonts/Noontree-Bold.otf')     format('opentype'); font-weight: 700; font-display: block; }
+@font-face { font-family: Noontree; src: url('fonts/Noontree-ExtraBold.otf') format('opentype'); font-weight: 800; font-display: block; }
+@font-face { font-family: Figtree;  src: url('fonts/Figtree-Regular.ttf')  format('truetype'); font-weight: 400; font-display: block; }
+@font-face { font-family: Figtree;  src: url('fonts/Figtree-Medium.ttf')   format('truetype'); font-weight: 500; font-display: block; }
+@font-face { font-family: Figtree;  src: url('fonts/Figtree-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: block; }
+@font-face { font-family: Figtree;  src: url('fonts/Figtree-Bold.ttf')     format('truetype'); font-weight: 700; font-display: block; }
+
+:root {
+  --noon: Noontree, Figtree, -apple-system, BlinkMacSystemFont, sans-serif;
+  --fig: Figtree, -apple-system, BlinkMacSystemFont, sans-serif;
+  --text-1: #262a33;          /* Light/Text/Primary */
+  --blue-600: #0076ff;
+  --grey-200: #f2f3f7;
+  --blue-gray-600: #666d85;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; align-items: center; justify-content: center;
+  background: #d8dae0;
+  font-family: var(--noon);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+p, h2 { margin: 0; font-weight: inherit; }
+img { display: block; max-width: none; }
+a { color: inherit; text-decoration: none; }
+button { all: unset; box-sizing: border-box; cursor: pointer; }
+
+/* ── primitives ──────────────────────────────────────────────────────── */
+.ab   { position: absolute; }
+.clip { overflow: hidden; }
+.ly   { position: absolute; display: block; }
+.ly > img, img.fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ly.mid { left: 50%; top: 50%; transform: translate(-50%, -50%); }
+img.cover   { object-fit: cover; }
+img.contain { object-fit: contain; }
+.ly > img.cover, .ly > img.contain { width: 100%; height: 100%; }
+/* flex box sized to a rotated child's bounds, child centred (Figma's
+   rotation export pattern) */
+.rot  { position: absolute; display: flex; align-items: center; justify-content: center; }
+.rot > * { flex: none; position: relative; display: block; }
+.rot > * > img:not(.ab) { position: absolute; inset: 0; width: 100%; height: 100%; }
+.blend-color { mix-blend-mode: color; }
+.glow { border-radius: 63.043px; }
+
+/* Figma strokes sit INSIDE the frame. Where the frame does NOT clip its
+   content, Figma paints the stroke under the children (the offer coupons'
+   perforations cover their border) — an inset box-shadow does exactly
+   that. Where it DOES clip, the stroke paints above the children: ::after. */
+.sk { box-shadow: inset 0 0 0 var(--sw, 1px) var(--sc, #000); }
+.stroke { position: relative; }
+.stroke::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  border: var(--sw, 1px) solid var(--sc, #000); border-radius: inherit; z-index: 3;
+}
+
+.hscroll { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; }
+.hscroll::-webkit-scrollbar { display: none; }
+
+/* Multi-layer Figma drop shadows (defs in index.html) */
+.shA { filter: url(#shA); }
+.shB { filter: url(#shB); }
+
+/* ── Device frame 912:10736 ──────────────────────────────────────────── */
+.screen {
+  position: relative;
+  width: 375px; height: 812px;
+  background: #fff;
+  overflow: hidden;
+  flex: none;
+}
+@media (max-width: 420px) {
+  body { display: block; background: #fff; }
+  .screen { width: 100%; height: 100vh; height: 100dvh; }
+}
+.scroll {
+  position: absolute; inset: 0;
+  top: calc(var(--hdr-h) - var(--hdr-dh) * var(--p));   /* the body hangs right under the header */
+  overflow-y: auto; overflow-x: hidden;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+}
+.scroll::-webkit-scrollbar { display: none; }
+/* Frame fill: linear gradient over the 375×812 frame (from its
+   gradientTransform: 178.49°, #DCF0FF → #FFF), white below. */
+.page {
+  position: relative;
+  width: 375px;
+  padding: 0 0 81px;          /* the header sits above (body from y=273 when expanded); clear the 81px nav */
+  background:                 /* the frame gradient, continuing below the header's part of it */
+    linear-gradient(178.4857deg, #dcf0ff 12.19%, #fff 65.153%) 0 -273px / 375px 812px no-repeat,
+    #fff;
+}
+
+/* ══ 912:10737 header ═══════════════════════════════════════════════════
+   Pinned above the scroll; collapses on scroll like the noon app (measured from
+   "home Page.mov", 402pt → our 375 frame). One progress --p (0 expanded, 1
+   collapsed) drives the geometry; --big / --mini are the two logo layers'
+   opacities, cross-faded on their own timings (app.js).
+     tiles 76 → 35 tall (pills), r 16 → 12; big logos scale with the tile
+     address slides up 60 and fades, behind the search bar
+     search 207 → 104 (just under the pills, gap 10, as in the app)
+     header / body top 273 → 170                                               */
+#home { --p: 0; --big: 1; --mini: 0; --hdr-h: 273px; --hdr-dh: 103px; }
+.hdr {
+  position: absolute; left: 0; top: 0; width: 100%; z-index: 10;
+  height: calc(var(--hdr-h) - var(--hdr-dh) * var(--p));
+  overflow: hidden;
+  background:
+    linear-gradient(178.4857deg, #dcf0ff 12.19%, #fff 65.153%) 0 0 / 375px 812px no-repeat,
+    #fff;
+}
+/* 912:10738 switcher — tiles 76², gap 8, from x=13 */
+.sw {
+  position: absolute; left: 0; top: 59px; z-index: 2;
+  width: 375px; height: calc(76px - 41px * var(--p));
+  display: flex; gap: 8px;
+  padding: 0 12px 0 13px;
+}
+.tile {
+  position: relative; flex: none;
+  width: 76px; height: calc(76px - 41px * var(--p));
+  border-radius: calc(16px - 4px * var(--p)); background: #fff;
+  overflow: hidden;
+}
+/* the Figma tile artwork, kept in its 76² box and scaled with the tile */
+.tile__big {
+  position: absolute; left: 0; top: 50%; width: 76px; height: 76px;
+  transform: translateY(-50%) scale(calc(1 - 0.5395 * var(--p)));
+  opacity: var(--big);
+}
+/* compact one-line wordmarks of the collapsed pills (app: noon / supermall / FOOD / MINUTES / Now) */
+.tile__mini {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: var(--mini); pointer-events: none;
+}
+.wm { white-space: nowrap; line-height: 1; font-family: var(--noon); }
+.wm--noon { font-weight: 700; font-size: 18px; letter-spacing: -0.3px; color: #000; }
+.wm--sm   { font-weight: 700; font-size: 14.5px; letter-spacing: -0.4px; color: #2b2fd1; }
+.wm--food { font-weight: 800; font-size: 18px; letter-spacing: 0.2px; color: #e0156b; }
+.wm--min  {
+  padding: 3px 4px 2px; border-radius: 3px; border: 1.2px solid #3a1414;
+  background: #e1251b; color: #fff;
+  font-weight: 800; font-style: italic; font-size: 9.5px; letter-spacing: 0.4px;
+}
+.wm--inst { font-weight: 800; font-size: 15px; letter-spacing: -0.4px; color: #111; }
+.wm--now  { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 17px; color: #111; }
+.wm--send { font-weight: 800; font-size: 17px; letter-spacing: -0.3px; color: #8a0fe0; }
+.wm--wash { font-family: var(--fig); font-weight: 800; font-style: italic; font-size: 17px; color: #4fb0e8; }
+
+/* 912:10792 address row */
+.addr {
+  position: absolute; left: 12px; top: 149px;
+  transform: translateY(calc(-60px * var(--p)));
+  opacity: max(0, calc(1 - 1.6 * var(--p)));
+  width: 351px; height: 44px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.addr__loc { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.addr__row, .addr__name { display: flex; align-items: center; gap: 4px; }
+.addr__home { position: relative; display: block; width: 18px; height: 18px; overflow: hidden; }
+.addr__title {
+  font-family: var(--noon); font-weight: 700;
+  font-size: 16px; line-height: 20px; letter-spacing: -0.15px;
+  color: #1d2539; white-space: nowrap;
+  text-shadow: 0 8.043px 16.086px rgba(0,0,0,.07);
+}
+.addr__chev { position: relative; display: block; width: 16px; height: 14.535px; }
+.addr__chev img { width: 100%; height: 100%; }
+.addr__line {
+  display: block; width: 282px;
+  font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.1px;
+  color: #475067;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.addr__wish {
+  position: relative; width: 40px; height: 40px;
+  border-radius: 46px; background: #fff; overflow: hidden;
+}
+
+/* 912:10812 search */
+.search {
+  position: absolute; left: 12px; top: 207px; z-index: 1;
+  transform: translateY(calc(-103px * var(--p)));
+  width: 343px; height: 48px;
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 12px;
+  background: #fff; border-radius: 12.064px;
+  cursor: text;
+}
+.search__field { position: relative; flex: 1 0 0; height: 20px; min-width: 1px; }
+.search__q { position: absolute; left: 1px; top: 0.26px; display: flex; align-items: center; gap: 4px; }
+.search__ico { position: relative; display: block; width: 18px; height: 18px; }
+.search__ico img { width: 100%; height: 100%; }
+.search__ph {
+  display: flex; align-items: center; height: 20px;
+  font-family: var(--fig); font-weight: 500;
+  font-size: 15px; line-height: 19.102px; letter-spacing: -0.3016px;
+  color: #1f1d1d; white-space: nowrap;
+}
+/* rotating search term: the old one rises out, the next rises in (app.js) */
+.search__tk { display: inline-grid; height: 20px; overflow: hidden; align-items: center; }
+.search__tk > span { grid-area: 1 / 1; white-space: nowrap; }
+.search__div { position: relative; flex: none; width: 0; height: 24px; }
+/* 24×1 divider rotated 90° about its centre → a vertical hairline at x 0..1 */
+.search__div img { position: absolute; left: -11.5px; top: 11.5px; width: 24px; height: 1px; transform: rotate(90deg); }
+.search__cam { position: relative; flex: none; display: block; width: 20px; height: 20px; }
+.search__cam img { width: 100%; height: 100%; }
+
+/* ══ 912:10820 body ═════════════════════════════════════════════════════ */
+.body { display: flex; flex-direction: column; gap: 28px; width: 375px; }
+.body > section { flex: none; }
+
+.sec-h {
+  padding: 0 14px;
+  font-family: var(--fig); font-weight: 700;
+  font-size: 17px; line-height: 22px; letter-spacing: -0.34px;
+  color: var(--text-1);
+  font-feature-settings: "ss04" 1;
+  white-space: nowrap;
+}
+.sec-h--cat { font-feature-settings: normal; }
+
+/* Tag "Ad" (component 2036:4578) */
+.ad {
+  position: absolute; z-index: 4;
+  display: flex; padding: 2px 4px; border-radius: 4px;
+  background: rgba(255,255,255,.8);
+  font-weight: 400; font-size: 10px; line-height: 11px;
+  color: var(--blue-gray-600); white-space: nowrap;
+}
+.ad--2 { padding: 2px 3px; border-radius: 2px; }
+
+/* ── 912:10821 Home Banner ───────────────────────────────────────────── */
+.banners { display: flex; gap: 12px; padding: 0 12px; height: 324px; }
+.hw { position: relative; flex: none; width: 204px; height: 324px; display: flex; align-items: center; }
+.hw__card { position: relative; width: 204px; height: 324px; border-radius: 16px; background: #fff; }
+.hw__l { position: absolute; left: 0; top: 0; width: 204px; height: 324px; border-radius: 16px; overflow: hidden; background: #fff; }
+.hw__l > img.cover { position: absolute; inset: 0; width: 100%; height: 100%; }
+.vid {
+  position: absolute; left: 6px; bottom: 6px; z-index: 4;
+  display: flex; padding: 6px; border-radius: 10px;
+  background: rgba(0,0,0,.64);
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+}
+.vid img { width: 20px; height: 20px; }
+
+/* Brand banner widget — p8, gap 8, 188-wide content */
+.bw {
+  position: relative; width: 204px; height: 324px;
+  display: flex; flex-direction: column; gap: 8px; padding: 8px;
+  border-radius: 16px;
+}
+.bw__top { position: relative; flex: 1 0 0; min-height: 1px; width: 188px; }
+.bw__grid { flex: none; width: 188px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.bc { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.bc__img { position: relative; width: 90px; height: 120px; border-radius: 8px; overflow: hidden; background: var(--grey-200); }
+.bc__img > img { position: absolute; left: 0; top: 0; width: 90px; height: 120px; }
+.notch {
+  position: absolute; left: 0; top: 0;
+  height: 14.876px; padding: 2px 4px;
+  display: flex; flex-direction: column; justify-content: center;
+  border-bottom-right-radius: 6px;
+}
+.notch > span {
+  display: flex; align-items: center; height: 8.926px;
+  font-weight: 700; font-size: 10px; line-height: 14px; letter-spacing: -0.1px;
+  color: #fff; white-space: nowrap;
+}
+.bc__txt { display: flex; flex-direction: column; gap: 2px; width: 90px; }
+.bc__name {
+  font-weight: 400; font-size: 11px; line-height: 14px; letter-spacing: -0.1px;
+  color: var(--blue-gray-600);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bc__price { display: flex; align-items: flex-end; gap: 3px; font-size: 11px; line-height: 14px; letter-spacing: -0.1px; white-space: nowrap; }
+.bc__price b { font-weight: 700; color: #1d2539; }
+.bc__price s { font-weight: 400; color: #989fb3; }
+
+/* ── 912:10894 Shop by category ──────────────────────────────────────── */
+.cats { background: #fff; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.cats > .sec-h { width: 375px; }
+.cats__grid { width: 375px; padding: 12px 0 8px; }
+.cats__rows { display: flex; flex-direction: column; gap: 16px; padding: 0 16px; width: max-content; }
+.cats__row { display: flex; align-items: center; gap: 16px; }
+.cat { position: relative; flex: none; display: block; width: 92px; height: 128px; }
+.cat__bg { position: absolute; left: 0; top: 0; width: 92px; height: 92px; }
+.cat__bg img { width: 100%; height: 100%; }
+.cat .ly > img:not(.cover) { width: 100%; height: 100%; }
+.cat__lbl {
+  position: absolute; left: 0; top: 96px; width: 92px; max-height: 28px;
+  font-weight: 600; font-size: 13px; line-height: 14px;
+  color: var(--text-1); text-align: center;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.sale { position: absolute; left: -193.236px; top: 0; width: 45.901px; height: 14.445px; z-index: 2; }
+.sale__tag {
+  position: absolute; left: 4.871px; top: 0;
+  width: 36.731px; height: 14.445px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(127.68445deg, #e11111 2.3761%, #ff5959 90.811%);
+}
+/* SALE outlines: text box at (4, 2.5); render bounds +(1.448, 0.519) */
+.sale__tag img { position: absolute; left: 5.448px; top: 3.019px; width: 26px; height: 8px; }
+
+/* ── 912:10977 Recommended for you ───────────────────────────────────── */
+.reco { display: flex; flex-direction: column; gap: 8px; }
+.reco__body { display: flex; flex-direction: column; align-items: center; }
+.tabs {
+  position: relative;   /* part of the page — scrolls with the section, not sticky */
+  width: 375px; display: flex; align-items: center;
+  padding: 6.4px 0 0 12px;
+  transition: background-color .2s;
+}
+.tab {
+  position: relative; flex: none;
+  min-width: 66.129px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  padding: 4px 12px 12px;
+  box-shadow: inset 0 -1.067px 0 #ebecef;         /* bottom stroke, inside */
+}
+.tab img { width: 28px; height: 28px; }
+.tab span {
+  max-height: 29.865px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-weight: 500; font-size: 13px; line-height: 16px; color: #344054; text-align: center;
+}
+.tab.is-on {
+  min-width: 72px; box-shadow: none;       /* "For you" is exactly 72 */
+  background: linear-gradient(to bottom, #fff 25.534%, #e0efff 117.53%);
+}
+.tab.is-on span { font-weight: 700; color: #1155cb; min-width: 100%; }
+.tab.is-on::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3.2px;
+  background: #1155cb; border-radius: 4.266px 4.266px 0 0;
+}
+
+/* SKU rails */
+.rail { display: flex; align-items: flex-start; gap: 12px; padding: 12px 12px 0; width: 375px; }
+.rail--reco { padding-top: 16px; }
+
+/* SKU card (reco / best / selling / summer) */
+.sku { position: relative; flex: none; width: 134px; display: flex; flex-direction: column; gap: 4px; background: #fff; border-radius: 8px; }
+.sku__img {
+  position: relative; width: 134px; height: 174px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  overflow: hidden; border-radius: 10px;
+  background: linear-gradient(rgba(7,47,143,.04), rgba(7,47,143,.04)), #fff;
+}
+.sku__photo { position: relative; flex: none; }
+.sku__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sku__wish {
+  position: absolute; right: 4px; top: 4px;
+  display: flex; padding: 4px; border-radius: 9999px;
+  background: rgba(255,255,255,.2);
+}
+.sku__wish img { width: 16px; height: 16px; }
+.sku__add {
+  position: absolute; top: 136px;
+  display: flex; padding: 4px; background: #fff;
+  --sw: 1.2px; --sc: var(--blue-600);
+}
+.sku__add img { width: 24px; height: 24px; }
+.sku__best {
+  position: absolute; left: 0; top: 0;
+  height: 20px; padding: 2px 6px;
+  display: flex; flex-direction: column; justify-content: center;
+  background: #084541; border-bottom-right-radius: 10px;
+}
+.sku__best span {
+  display: flex; align-items: center; height: 12px;
+  font-weight: 600; font-size: 12px; line-height: 14px; letter-spacing: -0.12px;
+  color: #fff; white-space: nowrap; font-feature-settings: "case" 1;
+}
+.sku .ad { left: 6px; bottom: 6px; }
+.sku__info { display: flex; flex-direction: column; gap: 8px; padding: 4px; width: 100%; }
+.sku__top { display: flex; flex-direction: column; gap: 4px; }
+.sku__title {
+  height: 36px; overflow: hidden;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  font-weight: 500; font-size: 14px; line-height: 18px; letter-spacing: -0.14px;
+  color: #212121; font-feature-settings: "case" 1;
+}
+.sku__rate { display: flex; align-items: flex-start; gap: 4px; }
+.sku__rate i { flex: 1 0 0; height: 18px; min-width: 1px; }
+.chip-r {
+  display: flex; align-items: center; gap: 2px;
+  padding: 2px 4px; border-radius: 4px; background: #f2f8f8;
+}
+.chip-r .star { position: relative; width: 12px; height: 11.5px; }
+.chip-r .star img { position: absolute; left: 6.09%; top: 7.05%; width: 87.82%; height: 88.12%; }
+.chip-r span {
+  font-weight: 600; font-size: 12px; line-height: 14px; letter-spacing: -0.12px;
+  color: #0a4f4a; font-feature-settings: "case" 1;
+}
+.sku__price { display: flex; flex-direction: column; }
+.sku__prow { display: flex; align-items: center; gap: 3px; width: 128px; white-space: nowrap; font-feature-settings: "case" 1; }
+.sku__prow b { font-weight: 700; font-size: 15px; line-height: 20px; letter-spacing: 0.07px; color: #0e0e0e; }
+.sku__prow s { font-weight: 400; font-size: 12px; line-height: 14px; letter-spacing: -0.12px; color: #848391; }
+.sku__prow em { font-style: normal; font-weight: 600; font-size: 12px; line-height: 14px; letter-spacing: -0.12px; color: #008200; }
+.sku__del { display: flex; align-items: flex-start; gap: 4px; }
+.sku__del img { width: 14px; height: 14px; }
+.sku__del span {
+  font-weight: 500; font-size: 12px; line-height: 14px; letter-spacing: -0.12px;
+  color: var(--blue-gray-600); white-space: nowrap;
+}
+.sku__badge { position: relative; width: 97px; height: 16px; }
+.sku__badge img { position: absolute; left: 0; top: 0; height: 16px; }
+/* Summer variant: card clips (r10), image box square-cornered, p6, no gap */
+.sku--flat { gap: 0; overflow: hidden; border-radius: 10px; }
+.sku--flat .sku__img { border-radius: 0; }
+.sku--flat .sku__info { padding: 6px; }
+
+/* ── 912:11229 Offers for you ────────────────────────────────────────── */
+.offers { background: #fff; overflow: hidden; display: flex; flex-direction: column; gap: 13px; height: 207px; }
+.offers__row { display: flex; align-items: center; gap: 12px; padding: 0 12px; height: 172px; }
+.cp {
+  position: relative; flex: none; display: flex;
+  width: 132px; height: 172px; padding: 5px;
+  background: #fff; border-radius: 24px;
+}
+.cp__in {
+  position: relative; width: 122px; height: 162px;
+  overflow: hidden; border-radius: 19px;
+}
+.cp__txt {
+  position: absolute; left: 10.34px; top: 67px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.cp__t {
+  font-family: var(--fig); font-weight: 700;
+  font-size: 14px; line-height: 18.012px; color: #fff;
+  white-space: pre; font-feature-settings: "case" 1;
+}
+.cp__t--win { font-family: var(--noon); font-size: 14.635px; letter-spacing: -0.2927px; }
+.cp__s {
+  width: 101.318px;
+  font-family: var(--fig); font-weight: 400;
+  font-size: 11.258px; line-height: 12.383px; letter-spacing: -0.2252px;
+  color: rgba(255,255,255,.7);
+}
+.cp__s--12 { font-size: 12px; line-height: 14px; letter-spacing: -0.2px; }
+.cp__line { position: absolute; left: 50%; top: 132px; width: 124px; height: 1px; transform: translateX(-50%); }
+.cp__line img { width: 124px; height: 1px; }
+.cp__btn {
+  position: absolute; left: 50%; top: 141px; transform: translateX(-50%);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 7.364px;
+  font-family: var(--fig); font-weight: 600;
+  font-size: 12px; line-height: 12.693px; letter-spacing: -0.1088px;
+  color: #fff; white-space: nowrap; font-feature-settings: "case" 1;
+}
+.cp__btn img { width: 12px; height: 12px; }
+.cp__hole { position: absolute; top: 136px; width: 18.134px; height: 18.134px; transform: translateY(-50%); }
+.cp__hole img { width: 100%; height: 100%; }
+
+/* ── 912:11316 / 912:12093 product sections ──────────────────────────── */
+.prod { display: flex; flex-direction: column; height: 344px; }
+
+/* ── 912:11548 Keep shopping for ─────────────────────────────────────── */
+.keep { display: flex; flex-direction: column; gap: 12px; height: 212px; overflow: hidden; }
+.sec-h--keep { padding: 0 14px; }
+.keep__row { display: flex; align-items: center; gap: 12px; padding: 0 12px; height: 178px; }
+.kc { flex: none; display: flex; flex-direction: column; justify-content: center; gap: 8px; min-width: 96px; }
+.kc__box { position: relative; overflow: hidden; border-radius: 12px; }
+.kc__box > .ly > img { object-fit: cover; }
+.kc__tag {
+  position: absolute; left: 6px; top: 6px; z-index: 1;
+  display: flex; padding: 4px; border-radius: 10px;
+  font-weight: 600; font-size: 10px; line-height: 12px; letter-spacing: -0.1043px;
+  color: #0e0e0e; white-space: nowrap; font-feature-settings: "case" 1;
+}
+.kc__txt { display: flex; flex-direction: column; gap: 4px; width: 100%; }
+.kc__name { display: flex; align-items: center; gap: 2px; width: 100%; }
+.kc__name img { width: 14px; height: 14px; flex: none; }
+.kc__name p {
+  flex: 1 0 0; min-width: 1px;
+  font-weight: 500; font-size: 14px; line-height: 16px; letter-spacing: -0.26px;
+  color: rgba(2,6,12,.92);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-feature-settings: "case" 1;
+}
+.kc--sm .kc__name p { font-weight: 600; font-size: 13px; }
+.kc__chip {
+  align-self: flex-start;
+  display: flex; align-items: center; gap: 4px;
+  border-radius: 4px; font-feature-settings: "case" 1; white-space: nowrap;
+}
+.kc__chip span { font-weight: 500; font-size: 12px; line-height: 16px; }
+.kc__chip i { position: relative; display: block; width: 12px; height: 12px; }
+.kc__chip i img { width: 12px; height: 12px; transform: rotate(-90deg); }
+.kc--sm .kc__chip span { font-size: 11px; line-height: 14px; letter-spacing: -0.16px; }
+
+/* ── 912:11850 Summer Essentials ─────────────────────────────────────── */
+.summer {
+  position: relative; height: 418px; overflow: hidden;
+  background: linear-gradient(90.50331deg, #111 0.44788%, #414755 51.395%, #111 99.485%);
+}
+.summer__head {
+  position: absolute; left: 16px; top: 24px; width: 343px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.summer__copy { width: 211px; }
+.summer__t {
+  font-weight: 700; font-size: 16px; line-height: 19px; letter-spacing: 1px;
+  color: #fff; white-space: nowrap;
+}
+.summer__s { font-weight: 400; font-size: 12px; line-height: 14px; color: rgba(255,255,255,.8); white-space: nowrap; }
+.summer__logo { width: 56px; height: 20px; object-fit: cover; }
+.summer__row {
+  position: absolute; left: 0; top: 81px; width: 375px; height: 312px;
+  display: flex; align-items: center; gap: 12px; padding: 0 16px;
+}
+.summer__vid { position: relative; flex: none; width: 134px; height: 308px; overflow: hidden; border-radius: 8px; }
+.summer__mute { position: absolute; right: 8px; bottom: 8.06px; width: 24px; height: 24px; overflow: hidden; }
+.rail--summer { width: 375px; height: 312px; flex: none; padding: 0; }
+
+/* ── 912:12325 New launches ──────────────────────────────────────────── */
+.launch { display: flex; align-items: center; padding: 0 12px; height: 422px; }
+.launch__card { position: relative; width: 351px; height: 420px; border-radius: 20px; background: #121212; }
+.launch__t {
+  position: absolute; left: 16.273px; top: 28.94px; transform: translateY(-50%);
+  font-family: var(--fig); font-weight: 500;
+  font-size: 20px; line-height: 1; letter-spacing: -0.5px;
+  color: #fff; white-space: nowrap; font-feature-settings: "salt" 1;
+}
+.launch__t span { color: #e5ff43; }
+.launch__rail {
+  position: absolute; left: 14px; top: 44.5px; width: 337px; height: 392px;
+  display: flex; align-items: center; gap: 14px;
+}
+.lc {
+  position: relative; flex: none;
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 12px; background: #fff; border-radius: 12px;
+}
+.lc:not(.lc--wide) { width: 213px; height: 327px; }
+.lc--wide { gap: 15px; }
+.lc--grey { width: 295.31px; height: 418px; background: #e9e9e9; }
+.lc__img { width: 187px; height: 187px; object-fit: cover; flex: none; }
+.lc__img--271 { width: 271px; height: 271px; }
+.lc__body { display: flex; flex-direction: column; gap: 8px; }
+.lc__txt { display: flex; flex-direction: column; gap: 4px; }
+.lc__t {
+  font-weight: 600; font-size: 16px; line-height: 20.971px; letter-spacing: -0.2px;
+  color: #101628; white-space: nowrap;
+}
+.lc--wide .lc__t { letter-spacing: 0; color: var(--text-1); }
+.lc__d { width: 189px; font-weight: 400; font-size: 14px; line-height: 18px; color: var(--text-1); }
+.lc__d2 {
+  width: 242.355px; height: 20.09px;
+  font-weight: 500; font-size: 12.816px; line-height: 17.476px; letter-spacing: 0.1165px;
+  color: var(--text-1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.lc__btn {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  width: 189px; height: 48px; border-radius: 10px;
+  background: #000;
+  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  font-family: var(--fig); font-weight: 500;
+  font-size: 15px; line-height: 20px; color: #fff; text-transform: capitalize;
+}
+/* "Shop the collection" (Zepto Norms, not available): Figma's render at
+   text box (61, 14) + render offset (0.908, 4.35) */
+.lc__btn--260 { width: 260px; border-radius: 12px; }
+.lc__btn--260 img { position: absolute; left: 61.908px; top: 18.35px; width: 136px; height: 14px; }
+.lc__cta { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
+.lc__cta--hug { width: auto; }
+.lc__grid { display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+.lc__gr { display: flex; align-items: center; gap: 8px; }
+.lc__gr--abs { position: relative; display: block; width: 271.308px; height: 131.654px; }
+.ic { position: relative; flex: none; width: 131.654px; height: 131.654px; overflow: hidden; border-radius: 8.156px; background: #fff; }
+.ic--photo { border-radius: 10.5px; }
+.ic__in {
+  position: absolute; left: calc(50% + 0.42px); top: calc(50% - 0.42px);
+  width: 87.492px; height: 112.489px; transform: translate(-50%, -50%);
+  background: #fff;
+}
+.ic__pi { position: absolute; left: calc(50% - 0.83px); top: -9.17px; width: 147.173px; height: 130.821px; transform: translateX(-50%); }
+
+/* ══ 912:12987 Bottom Nav ═══════════════════════════════════════════════ */
+.bnav { position: absolute; left: 0.381px; top: 731px; width: 375px; height: 81px; z-index: 20; }
+.bnav__bar {
+  position: absolute; left: 0; top: -1px; width: 375px; height: 88px;
+  background: #fff;
+  box-shadow: 0 -4px 9px rgba(0,0,0,.04), 0 -1px 2px rgba(0,0,0,.05);
+}
+.bnav__items {
+  position: absolute; left: 0; right: 0; top: -0.047px; height: 63px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+.bnav__it {
+  width: 67px; height: 63px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-family: var(--fig); font-weight: 600;
+  font-size: 12px; line-height: 20.018px; letter-spacing: -0.1601px;
+  color: #343d54; white-space: nowrap;
+}
+.bnav__it.is-on { color: #3866df; }
+.bnav__it > img, .bnav__ico { position: relative; display: block; width: 28px; height: 28px; flex: none; }
+.bnav__home {
+  position: absolute; left: 0; right: 0; top: 62.953px;
+  display: flex; justify-content: center; padding: 12px 0 8px; background: #fff;
+}
+.bnav__home span { width: 124px; height: 5px; border-radius: 8px; background: #fff; }
+
+/* ══ 1068:81084 Orbi (3D bot) — floating FAB ═══════════════════════════════
+   Figma frame 80×80 at (287, 644); ball r 30 centred at (327, 681.5). The canvas
+   covers the screen (hops, props, and the flight to the Orbi page); orbi/main.js
+   frames the camera so the resting ball lands exactly on the Figma box. Only #orbiHit (the
+   Figma box itself) takes pointer input. */
+.orbi { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 15; pointer-events: none; display: block; }
+/* while the Orbi sheet is open (or animating) the bot sits above it, as the matched Smart Animate layer */
+.orbi.on-page { z-index: 31; }
+.orbi-hit.on-page { z-index: 32; }
+.orbi-hit { position: absolute; left: 287px; top: 644px; width: 80px; height: 80px; z-index: 16; cursor: grab; touch-action: none; -webkit-tap-highlight-color: transparent; }
+.orbi-hit.grabbing { cursor: grabbing; }
+
+/* ══ 1093:108979 Status Bar — iOS light status bar, 375×42.565, fixed above every view
+   (outside #home, so nothing in the flow covers it). The header's gradient sits behind it,
+   so it needs no backdrop. While the Orbi sheet's black scrim is up it switches to light
+   content: orbi/main.js sets --sb-ink (0 dark → 1 white) with the scrim's progress. */
+.sbar { position: absolute; left: 0; top: 0; width: 375px; height: 42.565px; z-index: 60; pointer-events: none;
+  --sb-ink: 0; filter: invert(var(--sb-ink)); }
+.sbar > * { position: absolute; }
+.sbar__time { left: 21px; top: 13px; width: 54px; text-align: center;
+  font-family: -apple-system, 'SF Pro Text', BlinkMacSystemFont, system-ui, sans-serif; font-weight: 600; font-size: 15px;
+  line-height: normal; letter-spacing: -0.3px; color: #000; }
+.sbar__cell { left: 294px; top: 17.09px; width: 17px; height: 10.319px; }
+.sbar__wifi { left: 316.01px; top: 16.77px; width: 15.333px; height: 10.642px; }
+.sbar__batt { left: 336.33px; top: 17.33px; width: 24.34px; height: 11.333px; }
+.sbar__border { position: absolute; left: 0; top: 0; width: 22px; height: 11.333px; border: 1px solid #000; border-radius: 2.667px; opacity: .35; }
+.sbar__cap { position: absolute; left: 23.012px; top: 3.67px; width: 1.328px; height: 4px; }
+.sbar__fill { position: absolute; left: 2px; top: 2px; width: 18px; height: 7.333px; background: #000; border-radius: 1.333px; }
+
+/* ══ View ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ */
+.view { position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden; }
+.view--home { z-index: 1; }
+
+/* ══ 1086:92697 "Brand Banner2" — Orbi in a bottom sheet ═════════════════
+   orbi/main.js drives one progress (0 Home, 1 open): Home → a rounded card
+   355×768.7 at (10, 43) (scale 0.9467, r 18.93 on screen = 20 before scale),
+   scrim → #000 at 80%, sheet → up from below the screen to y 233. */
+.home-card { position: absolute; inset: 0; overflow: hidden; transform-origin: 0 0; }
+.sheet-scrim {
+  position: absolute; inset: 0; z-index: 28;
+  background: #000; opacity: 0; visibility: hidden;
+}
+.sheet {
+  position: absolute; left: 12px; top: 233px; width: 351px; height: 564px; z-index: 29;
+  background: #f9f9fb; border-radius: 20px; overflow: hidden;
+  visibility: hidden; transform: translateY(579px);
+  touch-action: none;
+}
+.sheet__hi {
+  position: absolute; left: 0; top: 70px; width: 351px; margin: 0;
+  font-family: var(--noon); font-weight: 700; font-size: 24px; line-height: 32px; letter-spacing: -0.25px;
+  color: #1d2539; text-align: center;
+}
+.sheet__sub {
+  position: absolute; left: 31px; top: 108px; width: 290px;
+  font-family: var(--noon); font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: -0.1px;
+  color: #666d85; text-align: center;
+}
